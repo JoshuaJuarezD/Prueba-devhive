@@ -1,0 +1,135 @@
+﻿
+@import url('styles.css');
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
+}
+
+.property-gallery {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    justify-content: center;
+}
+
+.property-card {
+    position: relative;
+    width: 400px;
+    margin-inline: 20px;
+    scroll-snap-align: start;
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.1s ease-in-out;
+}
+
+.property-card.active {
+    display: block;
+    transform: translateX(0);
+}
+
+.property-card.previous {
+    transform: translateX(-100%); 
+}
+
+.property-card.next {
+    transform: translateX(100%); 
+}
+
+.property-card img {
+    width: 100%;
+    height: auto;
+    max-height: 300px; 
+    border-radius: 5px;
+    margin-bottom: 10px;
+    object-fit: cover; 
+}
+.property-card h3 {
+    text-align: center;
+    font-size: 1.5rem; 
+    margin-bottom: 5px; 
+}
+
+.property-card p {
+    text-align: center;
+    font-size: 1rem;
+
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.property-card .arrow-icons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.arrow-icons {
+    align-content: center;
+}
+
+.property-card .arrow-icons svg {
+    width: 30px;
+    height: 30px;
+    fill: white; 
+    cursor: pointer;
+}
+
+.property-card .arrow-icons svg:hover {
+    fill: #258cfb; 
+}
+
+.property-details {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.property-image img {
+    width: 300px;
+    height: 300px;
+}
+
+.property-info {
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
+    .property-info h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .property-info p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .property-info dl {
+        margin-top: 20px;
+    }
+
+    .property-info dt {
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .property-info dd {
+        margin-bottom: 10px;
+    }
+
+.back-button {
+    margin-top: 20px;
+}
+
+.rounded {
+    border-radius: 10px;
+}
